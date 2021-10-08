@@ -23,3 +23,6 @@ Node is IDEAL for I/O Intensive Apps, File system, Network apps
 Node is node good for CPU Intensive Applications
 video encoding and Image manipulation Service
 
+# Node-Archieture:
+ Node is Runtime Environment For executing JS code
+ ![alt text](https://drive.google.com/file/d/11iK8WWmfpWEyfNQOBPVKq15Z0Vk_-8vV/view?usp=sharing)
