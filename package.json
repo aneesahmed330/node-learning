@@ -1,0 +1,20 @@
+{
+  "name": "node-learning",
+  "version": "1.0.0",
+  "description": "The repository contain node learning material and Guideline",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mx-s3rp3nt/node-learning.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mx-s3rp3nt/node-learning/issues"
+  },
+  "homepage": "https://github.com/mx-s3rp3nt/node-learning#readme"
+}
