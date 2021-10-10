@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/mx-s3rp3nt/node-learning/issues"
   },
-  "homepage": "https://github.com/mx-s3rp3nt/node-learning#readme"
+  "homepage": "https://github.com/mx-s3rp3nt/node-learning#readme",
+  "dependencies": {
+    "mongoose": "^6.0.10",
+    "underscore": "^1.13.1"
+  }
 }

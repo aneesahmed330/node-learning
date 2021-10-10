@@ -1,7 +1,8 @@
-function  sayHello(name){
-    console.log("Hello " + name)
-}
+const Logger = require('./logger')
+const logger = new Logger()
 
-sayHello("Anees Ahmed")
+logger.on('MessageLogged' , (args) => {
+    console.log('message: ' , args.message )
+})
 
-console.log(window.location)
+logger.log()
