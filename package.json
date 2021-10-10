@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/mx-s3rp3nt/node-learning#readme",
   "dependencies": {
-    "mongoose": "^6.0.10",
     "underscore": "^1.13.1"
+  },
+  "devDependencies": {
+    "jshint": "^2.13.1"
   }
 }
