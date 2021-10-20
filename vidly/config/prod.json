@@ -1,0 +1,6 @@
+{
+    "name": "Vidly Api - Prod Mode",
+    "mail" :{
+        "host" : "prod-mail-server" 
+    }
+}

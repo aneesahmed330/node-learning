@@ -1,0 +1,6 @@
+{
+    "name": "Vidly Api - Dev Mode",
+    "mail" :{
+        "host" : "dev-mail-server"
+    }
+}
