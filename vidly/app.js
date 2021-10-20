@@ -1,17 +1,46 @@
 require('dotenv').config()
+const debug = require('debug')('app:debug')
+const config = require('config')
+const helmet = require('helmet') // middleware
+const morgan = require('morgan')
 const express = require('express');
 const logger = require('./middleware/logger')
 const Joi = require('joi');
 const app = express();
 
-// parse json object in body
-app.use(express.json())
 
-//for static resourses
-app.use(express.static('public'))
+// debug package!
+debug('application starts..✌️')
 
-app.use(logger)
+app.use(express.json()) // parse json object in body
+app.use(helmet()) // setting various http headers
+app.use(express.static('public')) //for static resou    rses
 
+
+// template Engines configurations
+app.set('view engine' , 'ejs')
+
+
+
+
+// config
+console.log(`App Name:  ${config.get('name')}`)
+console.log(`Mail Server Name:  ${config.get('mail.host')}`)
+console.log(`Mail server pass: ${config.get('mail.pass')}`)
+
+
+// logging req in 'dev' mode 
+if (process.env.NODE_ENV === 'dev') {
+    app.use(logger) //custom  middle-ware
+    app.use(morgan('dev')) //dev-loggig
+}
+
+
+/*
+two ways 
+console.log(process.env.NODE_ENV) // 
+console.log(app.get('env'))  // return development by default
+*/
 
 const Genres = [{
         id: 1,
@@ -37,7 +66,7 @@ const Genres = [{
 ]
 
 app.get('/api/genres', (req, res) => {
-    return res.send(Genres)
+    return res.render('genres' , {Genres :Genres})
 })
 
 app.get('/api/genres/:id', (req, res) => {
@@ -93,7 +122,11 @@ app.delete('/api/genres/:id', (req, res) => {
 
 
 app.get('/', (req, res) => {
-    return res.send("<h1>Welcome to the Vidily</h1>")
+    return res.render('index')
+
+})
+app.get('/about', (req, res) => {
+    return res.render('about')
 
 })
 
