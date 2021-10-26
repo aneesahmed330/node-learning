@@ -1,3 +1,5 @@
+// async wait sample code 
+
 getuser = () => {
     setTimeout(() => {
         console.log("get usr from db")
@@ -11,3 +13,22 @@ async function getUser() {
 
 getUser()
 console.log('after')
+
+// Promise sample code
+
+let myPromise = new Promise(function(myResolve, myReject) {
+    // "Producing Code" (May take some time)
+    
+      myResolve(); // when successful
+      myReject();  // when error
+    });
+    
+    // "Consuming Code" (Must wait for a fulfilled Promise)
+    myPromise.then(
+      function(value) { /* code if successful */ },
+      function(error) { /* code if some error */ }
+    );
+
+
+// calllback
+
