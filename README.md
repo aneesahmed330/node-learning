@@ -87,6 +87,16 @@ os.totalmem()
 os.freemem()
 os.hostname()
 
+## File System Module
+
+all the async methods take a function as their last Argument, Node will call this function when the async operation completed. These functions are known as 'Call Backs'.
+
+## Event Module
+
+an Event is Basically a signal that indicates that something has happened in our application. 
+
+a Listener is a function which is called when an event is raised.
+
 # NPM -Node Package Manager
 
 ## create package.json
